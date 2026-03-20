@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Todo App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <h1 class="app-title">Todo List</h1>
+        <button id="themeToggle" class="icon-button" aria-label="Toggle theme">
+          🌙
+        </button>
+      </header>
+
+      <main class="app-main">
+        <section class="card new-todo-card">
+          <h2 class="card-title">New Task</h2>
+          <form id="todoForm" class="todo-form">
+            <input
+              id="todoInput"
+              class="input"
+              type="text"
+              placeholder="e.g. Buy milk"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" class="button primary">Add</button>
+          </form>
+        </section>
+
+        <section class="card list-card">
+          <header class="list-header">
+            <h2 class="card-title">Tasks</h2>
+            <select id="filterSelect" class="select">
+              <option value="all">All</option>
+              <option value="active">Active</option>
+              <option value="completed">Completed</option>
+            </select>
+          </header>
+          <ul id="todoList" class="todo-list" aria-live="polite"></ul>
+          <footer class="list-footer">
+            <span id="remainingCount" class="muted"></span>
+            <button id="clearCompleted" class="button ghost small">
+              Clear completed
+            </button>
+          </footer>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <span class="muted">Autosaved to local storage</span>
+      </footer>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

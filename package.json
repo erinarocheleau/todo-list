@@ -1,0 +1,12 @@
+{
+  "name": "cursor-todo-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple browser-based Todo app with local storage",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}
